@@ -1,32 +1,57 @@
 import { easeInOut, motion } from 'motion/react'
+import { Icon } from './components/Icon'
 
 export default function Home() {
   return (
     <main className="min-h-screen mx-auto px-3.5 md:px-6 lg:px-36 container flex flex-col">
-      <div className="pt-10 flex flex-col gap-10">
-        <p>Loaders</p>
-        <div className="flex flex-col w-64 border rounded-lg overflow-hidden">
-          <div className="p-6 flex justify-center items-center border-b">
-            <p>Accent</p>
-          </div>
-          <div className="p-6 flex justify-center items-center border-b">
-            <ClassicLoader />
-          </div>
-          <div className="p-6 flex justify-center items-center border-b">
-            <SpinningCubeLoader />
-          </div>
-          <div className="p-6 flex justify-center items-center border-b">
-            <StaggeredFadeLoader />
-          </div>
-          <div className="p-6 flex justify-center items-center border-b">
-            <PulsatingDots />
-          </div>
-          <div className="p-6 flex justify-center items-center">
-            <RippleLoader />
-          </div>
+      <div className="flex gap-16">
+        <Loaders />
+        <div className="pt-10">
+          <WaitingComponent />
         </div>
       </div>
     </main>
+  )
+}
+
+function WaitingComponent() {
+  return (
+    <div className="w-[400px] border-border bg-[#171819] text-[#B0B7BF] border h-full rounded-2xl">
+      <button className="px-4 py-2 bg-[#222425] rounded-2xl mt-10 ml-4">
+        <Icon name="ArrowLeft" />
+      </button>
+      <div className="border-border h-40 flex items-center justify-center border">
+        {/* Image placeholder*/} Image Placeholder
+      </div>
+    </div>
+  )
+}
+
+function Loaders() {
+  return (
+    <div className="pt-10 flex flex-col gap-10">
+      <p>Loaders</p>
+      <div className="flex flex-col w-64 border rounded-lg overflow-hidden">
+        <div className="p-6 flex justify-center items-center border-b">
+          <p>Accent</p>
+        </div>
+        <div className="p-6 flex justify-center items-center border-b">
+          <ClassicLoader />
+        </div>
+        <div className="p-6 flex justify-center items-center border-b">
+          <SpinningCubeLoader />
+        </div>
+        <div className="p-6 flex justify-center items-center border-b">
+          <StaggeredFadeLoader />
+        </div>
+        <div className="p-6 flex justify-center items-center border-b">
+          <PulsatingDots />
+        </div>
+        <div className="p-6 flex justify-center items-center">
+          <RippleLoader />
+        </div>
+      </div>
+    </div>
   )
 }
 
