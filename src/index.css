@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: var(--gray-1);
+  --color-foreground: var(--gray-10);
+  --color-green-background: var(--green-1);
+  --color-green-foreground: var(--green-10);
+  --color-elevation-1: var(--gray-2);
+  --color-elevation-1-hover: var(--gray-3);
+  --color-foreground-hover: var(--gray-11);
+  --color-foreground-contrast: var(--gray-11);
+  --color-green-foreground-hover: var(--green-11);
+  --color-green-background-hover: var(--green-2);
+  --color-gray-input: #1b1c1d;
+  --color-foreground-secondary: var(--gray-9);
+  --color-border: var(--gray-4);
+}
+* {
+  @apply border-border outline-none;
+}
+
+:root {
+  --gray-1: #171819;
+  --gray-2: #222425;
+  --gray-3: #2c2f30;
+  --gray-4: #2e3132;
+  --gray-9: #7d8996;
+  --gray-10: #b0b7bf;
+  --gray-11: #e8e8e8;
+
+  --green-1: #29512c;
+  --green-2: #336637;
+  --green-10: #4bf756;
+  --green-11: #94fa9b;
+}
+
+body {
+  @apply text-sm font-semibold border-border;
+  font-family: 'Josefin Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 500 600 700;
+}
