@@ -22,8 +22,8 @@ function WaitingComponent() {
           <Icon name="ArrowLeft" />
         </button>
       </div>
-      <div className="h-40 flex items-center justify-center">
-        <img src="/dama.png" alt="ludo" className="object-contain" />
+      <div className="flex items-center justify-center">
+        <img src="/dama.png" alt="ludo" className="object-contain h-40" />
       </div>
       <Players />
       <div className="px-4 flex justify-center">
