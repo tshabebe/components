@@ -4,7 +4,7 @@ import { Icon, UnknownUser } from './components/Icon'
 export default function Home() {
   return (
     <main className="min-h-screen mx-auto px-3.5 md:px-6 lg:px-36 container flex flex-col">
-      <div className="flex gap-16">
+      <div className="flex gap-16 flex-wrap">
         <Loaders />
         <div className="pt-10">
           <WaitingComponent />
